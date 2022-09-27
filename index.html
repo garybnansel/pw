@@ -13,11 +13,11 @@
             let sw = await navigator.serviceWorker.register('./sw.js')
         })
 
-        async function subscribe(){
+        async function subscribe() {
             let sw = await navigator.serviceWorker.ready;
             let push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
-                applicationServerKey : 'BAS3MNAfMk5wljcZUZaSO3Z-sjii9pmMLlUWUFzJm1SDG19E13VP8bRK4BBQj_9ASMP8qt3xs4AGFFl2SX_0pGE''
+                applicationServerKey : 'BAS3MNAfMk5wljcZUZaSO3Z-sjii9pmMLlUWUFzJm1SDG19E13VP8bRK4BBQj_9ASMP8qt3xs4AGFFl2SX_0pGE'
                 
             })
             console.log(JSON.stringify(push))
